@@ -8,13 +8,12 @@ Stdlib-only (no external dependencies).
 
 ## Quickstart (Conda on Windows)
 
-```bat
 conda create -n smurfdet python=3.11 -y
 conda activate smurfdet
 python --version
 
 pip install -e .
-python -m smurf_detector run --db data\fcc_tm.sqlite --channels CASH,ATM --direction IN --per-tx-threshold 10000 --window-days 10 --min-count 3 --min-total 20000 --write-alerts```
+python -m smurf_detector run --db data\fcc_tm.sqlite --channels CASH,ATM --direction IN --per-tx-threshold 10000 --window-days 10 --min-count 3 --min-total 20000 --write-alerts
 
 Make sure data\fcc_tm.sqlite exists in this repo (copy it from your fcc-synthetic-tm project or generate one there and copy over).
 
