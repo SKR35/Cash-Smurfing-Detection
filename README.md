@@ -24,19 +24,19 @@ Scans CASH/ATM IN transactions below a per-tx threshold.
 
 Slides a rolling window (e.g., 10 days) to find bursts with:
 
-at least min_count qualifying tx
+- at least min_count qualifying tx
 
-cumulative min_total amount
+- cumulative min_total amount
 
 Writes results back to the same DB:
 
-smurf_clusters — one row per detected burst (per account)
+- smurf_clusters — one row per detected burst (per account)
 
-smurf_cluster_tx — mapping: cluster → member transactions
+- smurf_cluster_tx — mapping: cluster → member transactions
 
-smurf_alert_tx — mapping: alert_id → transaction(s) (when --write-alerts)
+- smurf_alert_tx — mapping: alert_id → transaction(s) (when --write-alerts)
 
-Optionally inserts ACCOUNT-level alerts into alerts (rule_id='R_STRUCTURING_01')
+- Optionally inserts ACCOUNT-level alerts into alerts (rule_id='R_STRUCTURING_01')
 
 ## CLI
 
