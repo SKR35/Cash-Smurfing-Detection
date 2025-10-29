@@ -75,15 +75,19 @@ Advanced:
 ## Peek at results (SQLite snippets)
 
 Top clusters:
+~~~bash
 SELECT account_id, tx_count, ROUND(total_amount_minor/100.0,2) AS total,
        start_ts_utc, end_ts_utc
 FROM smurf_clusters
 ORDER BY total_amount_minor DESC
 LIMIT 10;
+~~~
 
 Alert → transactions:
+~~~bash
 SELECT a.alert_id, atx.tx_id
 FROM alerts a
 JOIN smurf_alert_tx atx ON atx.alert_id = a.alert_id
 WHERE a.rule_id = 'R_STRUCTURING_01'
 LIMIT 20;
+~~~
