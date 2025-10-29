@@ -8,6 +8,8 @@ Stdlib-only (no external dependencies).
 
 ## Quickstart (Conda on Windows)
 
+~~~bash
+
 - conda create -n smurfdet python=3.11 -y
 
 - conda activate smurfdet
@@ -17,6 +19,7 @@ Stdlib-only (no external dependencies).
 - pip install -e .
 
 - python -m smurf_detector run --db data\fcc_tm.sqlite --channels CASH,ATM --direction IN --per-tx-threshold 10000 --window-days 10 --min-count 3 --min-total 20000 --write-alerts
+~~~
 
 ## What it does
 
