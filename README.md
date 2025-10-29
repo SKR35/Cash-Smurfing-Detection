@@ -41,6 +41,7 @@ Writes results back to the same DB:
 
 ## CLI
 
+~~~bash
 python -m smurf_detector run --db <path> \
   --channels CASH,ATM \
   --direction IN \
@@ -49,6 +50,7 @@ python -m smurf_detector run --db <path> \
   --min-count 3 \
   --min-total 20000 \
   --write-alerts
+~~~
 
 Parameters (key)
 
